@@ -1,13 +1,19 @@
-#include<SoftwareSerial.h>
-int sensorPin=A0;
+/*********TACHLOG powered********
+*********www.troncart.com*******
+**electronics components online**
+***********Automatic Street Light System**************
+***********24-7-2019**************
+*/
+ #include<SoftwareSerial.h>
+int sensorPin=A0; // LDR value
 int sensorValue = 0;
-int led = 3;
+int led = 3; // Connect it to LED
 
 void setup()
 {
  pinMode(led, OUTPUT);
  Serial.begin(9600);
- // put your setup code here, to run once:
+ 
 }
 
 void loop()
@@ -22,5 +28,5 @@ void loop()
     }
  digitalWrite(led,LOW);
  delay(sensorValue);
- // put your main code here, to run repeatedly:
+ 
 }
